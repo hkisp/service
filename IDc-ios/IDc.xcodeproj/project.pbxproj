@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		978D127846CA4529AB703F26 /* IDcApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952860F328C448929CB4671C /* IDcApp.swift */; };
+		C51FAD51E29745DDA8EBFCC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDAA8CE3958409D983B91A3 /* ContentView.swift */; };
+		08D6D9273EA74E0BB2481458 /* VPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882CB148851A407CA51284F0 /* VPNManager.swift */; };
+		CE023AF7B53B4E9C8497656C /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D89E18FA1FE4245A3C2A591 /* AppGroup.swift */; };
+		7A0CCC7FE27A44F09330F21B /* VlessNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40220C5C45A14B6BA9183F61 /* VlessNode.swift */; };
+		308017EB8CE64F6095633F2B /* VlessParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6796C5F94CED4FFAA2F0E67E /* VlessParser.swift */; };
+		7CA0364CDD6848F3A6475879 /* XrayConfigBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1127377D6C343939DCE53F3 /* XrayConfigBuilder.swift */; };
+		2A4A3C74C162472999BF4279 /* NodeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71CAFC6CE7F4B919E893040 /* NodeStore.swift */; };
+		D2481BE2CF214D3494DE9345 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6F0A1C0F2049AABCC50DD2 /* PacketTunnelProvider.swift */; };
+		8C3E39F3805A46B086925FAA /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D89E18FA1FE4245A3C2A591 /* AppGroup.swift */; };
+		868640628A344412BB318522 /* VlessNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40220C5C45A14B6BA9183F61 /* VlessNode.swift */; };
+		5A1DE3BC0CAD4ACDB604DD74 /* VlessParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6796C5F94CED4FFAA2F0E67E /* VlessParser.swift */; };
+		FADE30A24C65449BA540D9BF /* XrayConfigBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1127377D6C343939DCE53F3 /* XrayConfigBuilder.swift */; };
+		D8DAA0CD4FDF406EBE0F30A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0198D3ACBFE748EF99A3638E /* Assets.xcassets */; };
+		836E81782C384C0D9A7D130F /* nodes.json in Resources */ = {isa = PBXBuildFile; fileRef = DE3B36E1666F47149AA680E3 /* nodes.json */; };
+		C10000000000000000000002 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C10000000000000000000001 /* NetworkExtension.framework */; };
+		C10000000000000000000003 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C10000000000000000000001 /* NetworkExtension.framework */; };
+		276B377B6BD84712A6D463EA /* IDcTunnel.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A10000000000000000000021 /* IDcTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A10000000000000000000033 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				276B377B6BD84712A6D463EA /* IDcTunnel.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A10000000000000000000020 /* IDc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IDc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000000000000000000021 /* IDcTunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = IDcTunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C10000000000000000000001 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		952860F328C448929CB4671C /* IDcApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDcApp.swift; sourceTree = "<group>"; };
+		FEDAA8CE3958409D983B91A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		882CB148851A407CA51284F0 /* VPNManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNManager.swift; sourceTree = "<group>"; };
+		39DD56B20A4E457794A9F251 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA9EC85D4F5C414F8EF6474B /* IDc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IDc.entitlements; sourceTree = "<group>"; };
+		0198D3ACBFE748EF99A3638E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2A6F0A1C0F2049AABCC50DD2 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		6FD283C4642140EBB077CE9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6B5BD8593EC4ABBAE1A4A7A /* IDcTunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IDcTunnel.entitlements; sourceTree = "<group>"; };
+		5D89E18FA1FE4245A3C2A591 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
+		40220C5C45A14B6BA9183F61 /* VlessNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VlessNode.swift; sourceTree = "<group>"; };
+		6796C5F94CED4FFAA2F0E67E /* VlessParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VlessParser.swift; sourceTree = "<group>"; };
+		F1127377D6C343939DCE53F3 /* XrayConfigBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XrayConfigBuilder.swift; sourceTree = "<group>"; };
+		F71CAFC6CE7F4B919E893040 /* NodeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeStore.swift; sourceTree = "<group>"; };
+		DE3B36E1666F47149AA680E3 /* nodes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = nodes.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A10000000000000000000031 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C10000000000000000000002 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10000000000000000000041 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C10000000000000000000003 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A10000000000000000000002 = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000001 /* IDc */,
+				B10000000000000000000002 /* IDcTunnel */,
+				B10000000000000000000003 /* Shared */,
+				CC72AF554FF448A9B9509EAF /* Frameworks */,
+				A10000000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A10000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000020 /* IDc.app */,
+				A10000000000000000000021 /* IDcTunnel.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B10000000000000000000001 /* IDc */ = {
+			isa = PBXGroup;
+			children = (
+				952860F328C448929CB4671C /* IDcApp.swift */,
+				FEDAA8CE3958409D983B91A3 /* ContentView.swift */,
+				882CB148851A407CA51284F0 /* VPNManager.swift */,
+				39DD56B20A4E457794A9F251 /* Info.plist */,
+				BA9EC85D4F5C414F8EF6474B /* IDc.entitlements */,
+				0198D3ACBFE748EF99A3638E /* Assets.xcassets */,
+			);
+			path = IDc;
+			sourceTree = "<group>";
+		};
+		B10000000000000000000002 /* IDcTunnel */ = {
+			isa = PBXGroup;
+			children = (
+				2A6F0A1C0F2049AABCC50DD2 /* PacketTunnelProvider.swift */,
+				6FD283C4642140EBB077CE9E /* Info.plist */,
+				A6B5BD8593EC4ABBAE1A4A7A /* IDcTunnel.entitlements */,
+			);
+			path = IDcTunnel;
+			sourceTree = "<group>";
+		};
+		B10000000000000000000003 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5D89E18FA1FE4245A3C2A591 /* AppGroup.swift */,
+				40220C5C45A14B6BA9183F61 /* VlessNode.swift */,
+				6796C5F94CED4FFAA2F0E67E /* VlessParser.swift */,
+				F1127377D6C343939DCE53F3 /* XrayConfigBuilder.swift */,
+				F71CAFC6CE7F4B919E893040 /* NodeStore.swift */,
+				DE3B36E1666F47149AA680E3 /* nodes.json */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CC72AF554FF448A9B9509EAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C10000000000000000000001 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A10000000000000000000010 /* IDc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000000000000000000051 /* Build configuration list for PBXNativeTarget "IDc" */;
+			buildPhases = (
+				A10000000000000000000030 /* Sources */,
+				A10000000000000000000031 /* Frameworks */,
+				A10000000000000000000032 /* Resources */,
+				A10000000000000000000033 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84AC3C4A8CAC4AFA902AA0E5 /* PBXTargetDependency */,
+			);
+			name = IDc;
+			productName = IDc;
+			productReference = A10000000000000000000020 /* IDc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A10000000000000000000011 /* IDcTunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000000000000000000052 /* Build configuration list for PBXNativeTarget "IDcTunnel" */;
+			buildPhases = (
+				A10000000000000000000040 /* Sources */,
+				A10000000000000000000041 /* Frameworks */,
+				A10000000000000000000042 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IDcTunnel;
+			productName = IDcTunnel;
+			productReference = A10000000000000000000021 /* IDcTunnel.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A10000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					A10000000000000000000010 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					A10000000000000000000011 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = A10000000000000000000050 /* Build configuration list for PBXProject "IDc" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "zh-Hans";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = A10000000000000000000002;
+			productRefGroup = A10000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10000000000000000000010 /* IDc */,
+				A10000000000000000000011 /* IDcTunnel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A10000000000000000000032 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8DAA0CD4FDF406EBE0F30A2 /* Assets.xcassets in Resources */,
+				836E81782C384C0D9A7D130F /* nodes.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10000000000000000000042 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A10000000000000000000030 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				978D127846CA4529AB703F26 /* IDcApp.swift in Sources */,
+				C51FAD51E29745DDA8EBFCC4 /* ContentView.swift in Sources */,
+				08D6D9273EA74E0BB2481458 /* VPNManager.swift in Sources */,
+				CE023AF7B53B4E9C8497656C /* AppGroup.swift in Sources */,
+				7A0CCC7FE27A44F09330F21B /* VlessNode.swift in Sources */,
+				308017EB8CE64F6095633F2B /* VlessParser.swift in Sources */,
+				7CA0364CDD6848F3A6475879 /* XrayConfigBuilder.swift in Sources */,
+				2A4A3C74C162472999BF4279 /* NodeStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10000000000000000000040 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2481BE2CF214D3494DE9345 /* PacketTunnelProvider.swift in Sources */,
+				8C3E39F3805A46B086925FAA /* AppGroup.swift in Sources */,
+				868640628A344412BB318522 /* VlessNode.swift in Sources */,
+				5A1DE3BC0CAD4ACDB604DD74 /* VlessParser.swift in Sources */,
+				FADE30A24C65449BA540D9BF /* XrayConfigBuilder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84AC3C4A8CAC4AFA902AA0E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A10000000000000000000011 /* IDcTunnel */;
+			targetProxy = ADC0E344F53447EB928713D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXContainerItemProxy section */
+		ADC0E344F53447EB928713D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A10000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A10000000000000000000011;
+			remoteInfo = IDcTunnel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin XCBuildConfiguration section */
+		A10000000000000000000060 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A10000000000000000000061 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A10000000000000000000070 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = IDc/IDc.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = IDc/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = IDc;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks");
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danny.idcxray;
+				PRODUCT_NAME = IDc;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A10000000000000000000071 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = IDc/IDc.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = IDc/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = IDc;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks");
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danny.idcxray;
+				PRODUCT_NAME = IDc;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		A10000000000000000000080 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = IDcTunnel/IDcTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = IDcTunnel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks", "@executable_path/../../Frameworks");
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danny.idcxray.tunnel;
+				PRODUCT_NAME = IDcTunnel;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A10000000000000000000081 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = IDcTunnel/IDcTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = IDcTunnel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks", "@executable_path/../../Frameworks");
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danny.idcxray.tunnel;
+				PRODUCT_NAME = IDcTunnel;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A10000000000000000000050 /* Build configuration list for PBXProject "IDc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000060 /* Debug */,
+				A10000000000000000000061 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10000000000000000000051 /* Build configuration list for PBXNativeTarget "IDc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000070 /* Debug */,
+				A10000000000000000000071 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10000000000000000000052 /* Build configuration list for PBXNativeTarget "IDcTunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000080 /* Debug */,
+				A10000000000000000000081 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A10000000000000000000001 /* Project object */;
+}

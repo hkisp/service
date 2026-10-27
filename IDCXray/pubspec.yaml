@@ -1,0 +1,29 @@
+name: idcxray
+description: "IDCXray - personal iOS VPN client (VLESS + REALITY + Vision) built on v2ray_box."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.7
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # https://github.com/pesaregorg/v2ray_box — pinned commit with iOS PacketTunnel
+  v2ray_box:
+    git:
+      url: https://github.com/pesaregorg/v2ray_box.git
+      ref: bc194f6a2fddee401d1c3b8141fec8d76c8d19f3
+  shared_preferences: ^2.3.0
+  flutter_secure_storage: ^9.2.4
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/idcxray-icon.png

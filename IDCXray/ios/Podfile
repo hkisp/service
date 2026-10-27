@@ -1,0 +1,75 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '15.0'
+
+# CocoaPods analytics sends network stats synchronously affecting flutter build latency.
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+project 'Runner', {
+  'Debug' => :debug,
+  'Profile' => :release,
+  'Release' => :release,
+}
+
+# Symlink core xcframeworks from app's Frameworks/ to plugin's expected location.
+# This runs before CocoaPods resolves dependencies, so vendored_frameworks validation passes.
+require 'fileutils'
+# The v2ray_box plugin lives in the pub cache (not ../../ like in the plugin's example app).
+# Find its real path from .flutter-plugins-dependencies (created by `flutter pub get`).
+require 'json'
+deps_file = File.expand_path('../.flutter-plugins-dependencies', __dir__)
+unless File.exist?(deps_file)
+  raise "#{deps_file} not found. Run `flutter pub get` in the project root first."
+end
+v2ray_plugin = JSON.parse(File.read(deps_file))['plugins']['ios'].find { |p| p['name'] == 'v2ray_box' }
+raise 'v2ray_box plugin not found in .flutter-plugins-dependencies' unless v2ray_plugin
+plugin_fw_dir = File.join(v2ray_plugin['path'], 'ios', 'Frameworks')
+{
+  'Libbox.xcframework' => 'Libbox.xcframework',
+  'LibXray.xcframework' => 'LibXray.xcframework',
+}.each do |app_name, plugin_name|
+  app_fw = File.expand_path("Frameworks/#{app_name}", __dir__)
+  plugin_fw = File.join(plugin_fw_dir, plugin_name)
+  if !File.exist?(app_fw)
+    puts "WARNING: ios/Frameworks/#{app_name} is missing. Run scripts/build_ios_*.sh first."
+  elsif !File.exist?(plugin_fw)
+    FileUtils.mkdir_p(plugin_fw_dir)
+    FileUtils.ln_sf(app_fw, plugin_fw)
+    puts "Symlinked #{app_name} to plugin's Frameworks/"
+  end
+end
+
+def flutter_root
+  generated_xcode_build_settings_path = File.expand_path(File.join('..', 'Flutter', 'Generated.xcconfig'), __FILE__)
+  unless File.exist?(generated_xcode_build_settings_path)
+    raise "#{generated_xcode_build_settings_path} must exist. If you're running pod install manually, make sure flutter pub get is executed first"
+  end
+
+  File.foreach(generated_xcode_build_settings_path) do |line|
+    matches = line.match(/FLUTTER_ROOT\=(.*)/)
+    return matches[1].strip if matches
+  end
+  raise "FLUTTER_ROOT not found in #{generated_xcode_build_settings_path}. Try deleting Generated.xcconfig, then run flutter pub get"
+end
+
+require File.expand_path(File.join('packages', 'flutter_tools', 'bin', 'podhelper'), flutter_root)
+
+flutter_ios_podfile_setup
+
+target 'Runner' do
+  use_frameworks!
+  use_modular_headers!
+
+  flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
+  target 'RunnerTests' do
+    inherit! :search_paths
+  end
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    flutter_additional_ios_build_settings(target)
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+    end
+  end
+end
